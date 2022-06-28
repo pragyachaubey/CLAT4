@@ -1,0 +1,261 @@
+#include<stdio.h>
+
+struct bill //storing numbers for bill
+{
+    int vb;
+    int nvb;
+    int desb;
+    int drb;
+    int tot;
+};
+
+int welcome() //initial output statements
+{
+    printf("Welcome to Pragya's Restaurant\n");
+    printf("How many people in your party? : ");
+    int p;
+    scanf("%d", &p);
+    return p;
+}
+
+void leaving(int out, int pep) //final output statements
+{
+    int c;
+    int ppp;
+    printf("the grand total : Rs.%d\n", out);
+    printf("would you like to split the bill between the people who came to eat? enter 1 for yes: ");
+    scanf("%d", &c);
+    if (c==1)
+    {
+        ppp=out/pep;
+        printf("price per person : Rs.%d\n", ppp);
+    }
+    printf("Thank you for eating at Pragya's Restaurant\n");
+    printf("Program terminated.");
+}
+
+int veg() // veg menu
+{
+    int o;
+    printf("would you like to see the vegetarian menu? enter 1 for yes: ");
+    scanf("%d", &o);
+    if (o==1)
+    {
+        printf("vegetarian menu\n");
+        int op, num, c, t=0;
+        printf("1. paneer tikka masala\tRs.150\n2. dal makhani\tRs.100\n3. malai kofta\tRs.200\n");
+        printf("4. mix veg\tRs.170\n5. chana masala\tRs.120\n");
+        printf("how many curries would you like to order: ");
+        scanf("%d", &c);
+        while (c--)
+        {
+            printf("place your order: (enter the number on the menu)\n");
+            scanf("%d", &op);
+            printf("how many of that would you like?");
+            scanf("%d", &num);
+            switch (op)
+            {
+                case 1:
+                t=t+(150*num);
+                break;
+                case 2:
+                t=t+(100*num);
+                break;
+                case 3:
+                t=t+(200*num);
+                break;
+                case 4:
+                t=t+(170*num);
+                break;
+                case 5:
+                t=t+(120*num);
+                break;
+                default:
+                {
+                    printf("invalid input, try again\n");
+                    c++;
+                }
+            }
+        }   
+        printf("Vegetarian Curries ordered.\n");
+        return t;
+    }
+    else
+        return 0;
+}
+
+int nonveg() //non veg menu
+{
+    int o;
+    printf("would you like to see the non-vegetarian menu? enter 1 for yes: ");
+    scanf("%d", &o);
+    if (o==1)
+    {
+        printf("non-vegetarian menu\n");
+    int op, num, c, t=0;
+    printf("1. chicken tikka masala\tRs.200\n2. fish curry\tRs.250\n3. keema masala\tRs.150\n");
+    printf("4. Butter chicken\tRs.170\n5. prawn fry\tRs.225\n");
+    printf("how many curries would you like to order: ");
+    scanf("%d", &c);
+    while (c--)
+    {
+        printf("place your order: (enter the number on the menu)\n");
+        scanf("%d", &op);
+        printf("how many of that would you like?");
+        scanf("%d", &num);
+        switch (op)
+        {
+            case 1:
+            t=t+(200*num);
+            break;
+            case 2:
+            t=t+(250*num);
+            break;
+            case 3:
+            t=t+(150*num);
+            break;
+            case 4:
+            t=t+(170*num);
+            break;
+            case 5:
+            t=t+(225*num);
+            break;
+            default:
+            {
+                printf("invalid input, try again\n");
+                c++;
+            }
+        }
+    }
+    printf("Non-Vegetarian Curries ordered.\n");
+    return t;
+    }
+    else
+        return 0;
+}
+
+int dessert() // dessert menu
+{
+    int o;
+    printf("would you like to see the dessert menu? enter 1 for yes: ");
+    scanf("%d", &o);
+    if (o==1)
+    {
+        printf("dessert menu\n");
+    int op, num, c, t=0;
+    printf("1. ice cream\tRs.30\n2. brownies\tRs.100\n3. Hot Brownies with ice cream\tRs.200\n");
+    printf("4. custard\tRs.150\n5. gulab jamun\tRs.60\n6. shahi tukda\tRs.150\n");
+    printf("how many desserts would you like to order: ");
+    scanf("%d", &c);
+    while (c--)
+    {
+        printf("place your order: (enter the number on the menu)\n");
+        scanf("%d", &op);
+        printf("how many of that would you like? ");
+        scanf("%d", &num);
+        switch (op)
+        {
+            case 1:
+            t=t+(30*num);
+            break;
+            case 2:
+            t=t+(100*num);
+            break;
+            case 3:
+            t=t+(200*num);
+            break;
+            case 4:
+            t=t+(150*num);
+            break;
+            case 5:
+            t=t+(60*num);
+            break;
+            case 6:
+            t=t+(150*num);
+            break;
+            default:
+            {
+                printf("invalid input, try again\n");
+                c++;
+            }
+        }
+    }
+    printf("Desserts ordered.\n");
+    return t;
+    }
+    else
+        return 0;
+}
+
+int drink() // drink menu
+{
+    int o;
+    printf("would you like to see the drinks menu? enter 1 for yes: ");
+    scanf("%d", &o);
+    if (o==1)
+    {
+    printf("drinks menu\n");
+    int op, num, c, t=0;
+    printf("1. soft drinks\tRs.20\n2. fresh squeezed juice\tRs.50\n3. coffee\tRs.30\n");
+    printf("4. tea\tRs.15\n5. milkshakes\tRs.70\n");
+    printf("how many drinks would you like to order: ");
+    scanf("%d", &c);
+    while (c--)
+    {
+        printf("place your order: (enter the number on the menu)\n");
+        scanf("%d", &op);
+        printf("how many of that would you like? ");
+        scanf("%d", &num);
+        switch (op)
+        {
+            case 1:
+            t=t+(20*num);
+            break;
+            case 2:
+            t=t+(50*num);
+            break;
+            case 3:
+            t=t+(30*num);
+            break;
+            case 4:
+            t=t+(15*num);
+            break;
+            case 5:
+            t=t+(70*num);
+            break;
+            default:
+            {
+                printf("invalid input, try again\n");
+                c++;
+            }
+        }
+    }
+    printf("Drinks ordered.\n");
+    return t;
+    }
+    else
+        return 0;
+}
+
+int choice() //main money control for bill
+{
+    char c;
+    struct bill b;
+    b.vb=veg();
+    b.nvb=nonveg();
+    b.desb=dessert();
+    b.drb=drink();
+    b.tot=b.vb+b.nvb+b.desb+b.drb;
+    int total = b.tot;
+    return total;
+}
+
+int main() //main menu
+{
+    int people;
+    int t;
+    people=welcome();
+    t = choice();
+    leaving(t, people);
+    return 0;
+}

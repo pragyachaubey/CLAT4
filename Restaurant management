@@ -142,46 +142,46 @@ int dessert() // dessert menu
     if (o==1)
     {
         printf("dessert menu\n");
-    int op, num, c, t=0;
-    printf("1. ice cream\tRs.30\n2. brownies\tRs.100\n3. Hot Brownies with ice cream\tRs.200\n");
-    printf("4. custard\tRs.150\n5. gulab jamun\tRs.60\n6. shahi tukda\tRs.150\n");
-    printf("how many desserts would you like to order: ");
-    scanf("%d", &c);
-    while (c--)
-    {
-        printf("place your order: (enter the number on the menu)\n");
-        scanf("%d", &op);
-        printf("how many of that would you like? ");
-        scanf("%d", &num);
-        switch (op)
+        int op, num, c, t=0;
+        printf("1. ice cream\tRs.30\n2. brownies\tRs.100\n3. Hot Brownies with ice cream\tRs.200\n");
+        printf("4. custard\tRs.150\n5. gulab jamun\tRs.60\n6. shahi tukda\tRs.150\n");
+        printf("how many desserts would you like to order: ");
+        scanf("%d", &c);
+        while (c--)
         {
-            case 1:
-            t=t+(30*num);
-            break;
-            case 2:
-            t=t+(100*num);
-            break;
-            case 3:
-            t=t+(200*num);
-            break;
-            case 4:
-            t=t+(150*num);
-            break;
-            case 5:
-            t=t+(60*num);
-            break;
-            case 6:
-            t=t+(150*num);
-            break;
-            default:
+            printf("place your order: (enter the number on the menu)\n");
+            scanf("%d", &op);
+            printf("how many of that would you like? ");
+            scanf("%d", &num);
+            switch (op)
             {
-                printf("invalid input, try again\n");
-                c++;
+                case 1:
+                t=t+(30*num);
+                break;
+                case 2:
+                t=t+(100*num);
+                break;
+                case 3:
+                t=t+(200*num);
+                break;
+                case 4:
+                t=t+(150*num);
+                break;
+                case 5:
+                t=t+(60*num);
+                break;
+                case 6:
+                t=t+(150*num);
+                break;
+                default:
+                {
+                    printf("invalid input, try again\n");
+                    c++;
+                }
             }
-        }
-    }
-    printf("Desserts ordered.\n");
-    return t;
+        }   
+        printf("Desserts ordered.\n");
+        return t;
     }
     else
         return 0;
@@ -194,44 +194,44 @@ int drink() // drink menu
     scanf("%d", &o);
     if (o==1)
     {
-    printf("drinks menu\n");
-    int op, num, c, t=0;
-    printf("1. soft drinks\tRs.20\n2. fresh squeezed juice\tRs.50\n3. coffee\tRs.30\n");
-    printf("4. tea\tRs.15\n5. milkshakes\tRs.70\n");
-    printf("how many drinks would you like to order: ");
-    scanf("%d", &c);
-    while (c--)
-    {
-        printf("place your order: (enter the number on the menu)\n");
-        scanf("%d", &op);
-        printf("how many of that would you like? ");
-        scanf("%d", &num);
-        switch (op)
+        printf("drinks menu\n");
+        int op, num, c, t=0;
+        printf("1. soft drinks\tRs.20\n2. fresh squeezed juice\tRs.50\n3. coffee\tRs.30\n");
+        printf("4. tea\tRs.15\n5. milkshakes\tRs.70\n");
+        printf("how many drinks would you like to order: ");
+        scanf("%d", &c);
+        while (c--)
         {
-            case 1:
-            t=t+(20*num);
-            break;
-            case 2:
-            t=t+(50*num);
-            break;
-            case 3:
-            t=t+(30*num);
-            break;
-            case 4:
-            t=t+(15*num);
-            break;
-            case 5:
-            t=t+(70*num);
-            break;
-            default:
+            printf("place your order: (enter the number on the menu)\n");
+            scanf("%d", &op);
+            printf("how many of that would you like? ");
+            scanf("%d", &num);
+            switch (op)
             {
-                printf("invalid input, try again\n");
-                c++;
+                case 1:
+                t=t+(20*num);
+                break;
+                case 2:
+                t=t+(50*num);
+                break;
+                case 3:
+                t=t+(30*num);
+                break;
+                case 4:
+                t=t+(15*num);
+                break;
+                case 5:
+                t=t+(70*num);
+                break;
+                default:
+                {
+                    printf("invalid input, try again\n");
+                    c++;
+                }
             }
         }
-    }
-    printf("Drinks ordered.\n");
-    return t;
+        printf("Drinks ordered.\n");
+        return t;
     }
     else
         return 0;
